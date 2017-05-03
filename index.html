@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
   <style>
-	  .verif {z-index: 2; height: 100%; width: 100%;}
+	  .verif {z-index: 20; height: 100%; width: 100%;}
     @keyframes flash {
       0% {color:green;} 
       50% {color:green;}
@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-	<div class="verif" id="ver"><button onclick="if("
+	<div class="verif" id="ver"><button id="btn" onclick="if(window.innerHeight <= 100 || window.innerWidth <= 150){document.getElementById('ver').style.zIndex='-1';document.getElementById('btn').style.zIndex='-2';}else{window.close();}">Enter Site</button></div>
   <div class="cdc">
 <script src="https://www.shoutbox.com/chat/chat.js.php"></script>
                             <script> var chat = new Chat(9452);</script>
