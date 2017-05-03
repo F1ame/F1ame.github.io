@@ -10,7 +10,7 @@
       56% {color:green;}
       100% {color:green;}
     }
-	  
+	  .flsh {animation: flash 3s 0s infinite;}  
  .cdc { width: 40%;position: absolute; bottom: 0px; right: 2%;
 	 background: black
     }.shoutBoxHeader {
@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-	<div class="verif" id="ver"><button id="btn" onclick="if(window.innerHeight <= 100 || window.innerWidth <= 150){document.getElementById('ver').style.zIndex='-1';document.getElementById('btn').style.zIndex='-2';}else{window.close();}">Enter Site</button></div>
+	<div class="verif" id="ver"><button id="btn" onclick="if(window.innerHeight <= 100 || window.innerWidth <= 150){document.getElementById('ver').style.zIndex='-1';document.getElementById('btn').style.zIndex='-2';}else{window.close();}">Enter Site</button><span style="background: black; color: green;">>:<span class="flsh">|</span></span></div>
   <div class="cdc">
 <script src="https://www.shoutbox.com/chat/chat.js.php"></script>
                             <script> var chat = new Chat(9452);</script>
