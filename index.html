@@ -3,12 +3,12 @@
   <style>
 
     @keyframes flash {
-      0% {color:green;} 
-      50% {color:green;}
+      0% {color:lightgreen;} 
+      50% {color:lightgreen;}
       51% {color:black;}
       75% {color:black;}
-      76% {color:green;}
-      100% {color:green;}
+      76% {color:lightgreen;}
+      100% {color:lightgreen;}
     }
 	  .flsh {animation: flash 1s 0s infinite;}  
  .cdc { z-index:1; width: 40%;position: absolute; bottom: 0px; right: 2%;
@@ -21,8 +21,9 @@
 <body>
 	<div class="doc">
 	  <div class="cdc">
-<script src="https://www.shoutbox.com/chat/chat.js.php"></script>
+<script src="https://www.shoutbox.com/chat/chat.js.php">/*<script> var chat = new Chat(9452);<script>*/
+		  </script>
 	</div></div>
-	<div class="verif" id="ver"><button id="btn" onclick="if(window.innerHeight <= 100 || window.innerWidth <= 400){document.getElementById('ver').style.zIndex=-1;document.getElementById('btn').style.zIndex=-2;}else{document.write("");}">Enter Site</button><br><span style="font-size: 200%; background: black; color: green;">>  <span class="flsh">|</span></span></div>
+	<div class="verif" id="ver"><button id="btn" onclick="if(window.innerHeight <= 100 || window.innerWidth <= 400){document.getElementById('ver').style.zIndex=-1;document.getElementById('btn').style.zIndex=-2;}else{document.write("");}">Enter Site</button><br><span style="font-size: 200%; background: black; color: lightgreen;">>  <span class="flsh">|</span></span></div>
 
     </body>
