@@ -30,7 +30,7 @@ document.onkeyup = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
-    console.log(charCode);
+    console.log(charCode capi.toString());
 	if(charCode == 16) {
 		capi = false;
 	}
@@ -40,8 +40,10 @@ document.onkeyup = function(evt) {
 		}
 	}else if (capi == true) {
 	txtcrnt = txtcrnt + charStr.toUpperCase();
+		console.log("capital");
 	}else{
 	txtcrnt = txtcrnt + charStr.toLowerCase();
+		console.log("lower");
 	}
 document.getElementById("text").innerHTML = txtcrnt;
 };
