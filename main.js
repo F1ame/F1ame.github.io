@@ -15,12 +15,32 @@ otp = "<div"+ attr + ">";
 div2 = "</div>";
 pgnd = "</body></html>";
 txtcrnt = ":";
+capi = false;
 txtarea = document.getElementById("text");
+document.onkeydown = function(evt2) {
+    evt2 = evt2 || window.event;
+    var charCode2 = evt.keyCode || evt.which;
+    var charStr2 = String.fromCharCode(charCode2);
+    console.log(charCode2);
+	if(charCode2 = 16) {
+		capi = true
+}
 document.onkeyup = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
     console.log(charCode);
-	txtcrnt = txtcrnt + charStr;
+	if(charCode = 16) {
+		capi = false;
+	}
+	if(charCode = 8) {
+		if(txtcrnt.length > 1) {
+		txtcrnt = txtcrnt.substring(0,txtcrnt.length-1);
+		}
+	}else if(capi) {
+	txtcrnt = txtcrnt + charStr.toUpperCase();
+	}else{
+	txtcrnt = txtcrnt + charStr.toLowerCase();
+	}
 document.getElementById("text").innerHTML = txtcrnt;
 };
