@@ -14,6 +14,12 @@ otp = "<div"+ attr + ">";
 }
 div2 = "</div>";
 pgnd = "</body></html>";
+document.onkeypress = function(evt) {
+    evt = evt || window.event;
+    var charCode = evt.keyCode || evt.which;
+    var charStr = String.fromCharCode(charCode);
+    alert(charStr);
+};
 txtarea = document.getElementById("text")
 function pagenum(num) {
 	pagetitle = ""
