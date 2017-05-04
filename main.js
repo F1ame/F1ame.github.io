@@ -25,6 +25,7 @@ document.onkeydown = function(evt2) {
 	if(charCode2 = 16) {
 		capi = true
 }
+}
 document.onkeyup = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
