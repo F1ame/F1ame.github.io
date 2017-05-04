@@ -31,14 +31,14 @@ document.onkeyup = function(evt) {
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
     console.log(charCode);
-	if(charCode = 16) {
+	if(charCode == 16) {
 		capi = false;
 	}
-	if(charCode = 8) {
+	if(charCode == 8) {
 		if(txtcrnt.length > 1) {
 		txtcrnt = txtcrnt.substring(0,txtcrnt.length-1);
 		}
-	}else if(capi) {
+	}else if (capi == true) {
 	txtcrnt = txtcrnt + charStr.toUpperCase();
 	}else{
 	txtcrnt = txtcrnt + charStr.toLowerCase();
