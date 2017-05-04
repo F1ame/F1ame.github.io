@@ -16,11 +16,11 @@ div2 = "</div>";
 pgnd = "</body></html>";
 txtcrnt = ":";
 txtarea = document.getElementById("text");
-document.onkeypress = function(evt) {
+document.onkeyup = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
-    alert(charStr+charCode);
+    console.log(charCode);
 	txtcrnt = txtcrnt + charStr;
 document.getElementById("text").innerHTML = txtcrnt;
 };
