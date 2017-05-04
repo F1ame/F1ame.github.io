@@ -5,7 +5,7 @@ pgtp = "<!doctype html>\
   <link rel=\"stylesheet\"href=\"main.css\">\
 	<script src=\"main.js\"></script>\
 	<audio loop autoplay><source src=\"Typing (Sound Effect).mp3\" type=\"audio/mpeg\"></audio>\
-<div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\"></span><span class=\"flsh\">|</span></span></div>\
+<div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\"> </span><span class=\"flsh\">|</span></span></div>\
 <title>";
 pgtp2 = "</title></head><body>";
 function div(attr) {
@@ -14,7 +14,7 @@ otp = "<div"+ attr + ">";
 }
 div2 = "</div>";
 pgnd = "</body></html>";
-txtcrnt = ""
+txtcrnt = " ";
 txtarea = document.getElementById("text").innerHTML;
 document.onkeypress = function(evt) {
     evt = evt || window.event;
