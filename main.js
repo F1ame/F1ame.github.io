@@ -22,7 +22,7 @@ document.onkeydown = function(evt2) {
     var charCode2 = evt2.keyCode || evt2.which;
     var charStr2 = String.fromCharCode(charCode2);
     console.log(charCode2);
-	if(charCode2 = 16) {
+	if(charCode2 == 16) {
 		capi = true
 }
 }
@@ -38,10 +38,10 @@ document.onkeyup = function(evt) {
 		if(txtcrnt.length > 1) {
 		txtcrnt = txtcrnt.substring(0,txtcrnt.length-1);
 		}
-	}else if (capi == true) {
+	}else if (capi == true && charCode != 16) {
 	txtcrnt = txtcrnt + charStr.toUpperCase();
 		console.log("capital");
-	}else{
+	}else if(charCode != 16){
 	txtcrnt = txtcrnt + charStr.toLowerCase();
 		console.log("lower");
 	}
