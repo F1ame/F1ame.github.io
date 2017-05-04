@@ -22,5 +22,6 @@ document.onkeypress = function(evt) {
     var charStr = String.fromCharCode(charCode);
     alert(charStr+charCode);
 	txtcrnt = txtcrnt + charStr;
-txtarea = txtcrnt
+txtarea = txtcrnt;
+	return txtarea;
 };
