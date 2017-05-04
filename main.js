@@ -20,11 +20,12 @@ document.onkeypress = function(evt) {
     var charStr = String.fromCharCode(charCode);
     alert(charStr);
 };
-txtarea = document.getElementById("text")
-function pagenum(num) {
+txtarea = document.getElementById("text");
+/*function pagenum(num) {
 	pagetitle = ""
 	switch(num) {
 		case 1:{
 			
 		}
 		  }
+*/
