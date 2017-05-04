@@ -19,7 +19,7 @@ capi = false;
 txtarea = document.getElementById("text");
 document.onkeydown = function(evt2) {
     evt2 = evt2 || window.event;
-    var charCode2 = evt.keyCode || evt.which;
+    var charCode2 = evt2.keyCode || evt2.which;
     var charStr2 = String.fromCharCode(charCode2);
     console.log(charCode2);
 	if(charCode2 = 16) {
