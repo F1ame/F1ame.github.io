@@ -14,10 +14,13 @@ otp = "<div"+ attr + ">";
 }
 div2 = "</div>";
 pgnd = "</body></html>";
+txtcrnt = ""
+txtarea = document.getElementById("text");
 document.onkeypress = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
-    alert(charStr);
+    alert(charStr+charCode);
+	txtcrnt = txtcrnt + charStr;
+txtarea.innerHTML = txtcrnt
 };
-txtarea = document.getElementById("text");
