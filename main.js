@@ -21,11 +21,3 @@ document.onkeypress = function(evt) {
     alert(charStr);
 };
 txtarea = document.getElementById("text");
-/*function pagenum(num) {
-	pagetitle = ""
-	switch(num) {
-		case 1:{
-			
-		}
-		  }
-*/
