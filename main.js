@@ -10,7 +10,7 @@ pgtp = "<!doctype html>\
 pgtp2 = "</title></head><body>";
 charCodelst = 0
 function indx(item) {
-return item == charCode	lst
+return item == charCodelst
 }
 function div(attr) {
 otp = "<div"+ attr + ">";
