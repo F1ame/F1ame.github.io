@@ -73,11 +73,13 @@ document.onkeyup = function(evt) {
 	}
 	if(charCode != 16) {
 		if(charCode != 8) {
-		charCodelst = charCode	
-		}
+		charCodelst = charCodelst.append(charCode);
+		};
 		if(chck.findIndex(indx) != -1) {
 		chck.splice(chck.findIndex(indx),1);
 				   }
+		console.log(chck);
+		console.log(chck.length);
 				   if(chck.length == 0) {
 			alwtp = true;
 				   }else{alwtp = 0}
