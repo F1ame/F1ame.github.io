@@ -46,6 +46,7 @@ document.getElementById("text").innerHTML = txtcrnt;
 };
 function letter(cc) {
  sk = "";
+	console.log(capi)
 	if(capi == true) {
 	switch (cc){
 		case 65:
@@ -265,5 +266,6 @@ function letter(cc) {
 			sk = "";
 			break;
 		  }
+      console.log(sk)
 return sk;
 }}
