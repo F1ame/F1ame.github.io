@@ -25,6 +25,7 @@ run: "got"
 function nter() {
 cmd(txtcrnt);
 	txtcrnt = ":";
+	document.getElementById("text").innerHTML = txtcrnt;
 }
 function cmd(cm) {
 cm = cm.substring(1,cm.length);
@@ -36,6 +37,8 @@ cm = cm.substring(1,cm.length);
 	cmdev = eval(cmdev)
 	console.log(cm);
 	console.log(cmdev);
+	prevoutp = document.getElementById("
+	document.getElementById("outpt").innerHTML = ">" cmdev + "<br>";
 }
 pgnd = "</body></html>";
 txtcrnt = ":";
