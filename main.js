@@ -264,4 +264,4 @@ function letter(cc) {
 			break;
 		  }
 return sk;
-};
+}}
