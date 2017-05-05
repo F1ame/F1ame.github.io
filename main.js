@@ -8,8 +8,9 @@ pgtp = "<!doctype html>\
 <div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\">:</span><span class=\"flsh\">|</span></span></div>\
 <title>";
 pgtp2 = "</title></head><body>";
+charCodelst = 0
 function indx(item) {
-return item == charCode	
+return item == charCode	lst
 }
 function div(attr) {
 otp = "<div"+ attr + ">";
@@ -71,6 +72,9 @@ document.onkeyup = function(evt) {
 		capi = false;
 	}
 	if(charCode != 16) {
+		if(charCode != 8) {
+		charCodelst = charCode	
+		}
 		if(chck.findIndex(indx) != -1) {
 		chck.splice(chck.findIndex(indx),1);
 				   }
