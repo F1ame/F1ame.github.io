@@ -77,7 +77,7 @@ function letter(cc) {
 		case 89:
 		case 90:
 		sk = String.fromCharCode(cc);
-			sk = sk.toUpperCase();
+			console.log(sk)
 		break;
 		case 48:
 			sk = ")";
