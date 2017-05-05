@@ -58,9 +58,9 @@ document.onkeydown = function(evt2) {
 	txtcrnt = txtcrnt + letter(charCode2);
 		alwtp = false;
 	}
-	}
-	if(charCode2 != 16 && charCode2 != 8) {
+		if(charCode2 != 16 && charCode2 != 8) {
 		chck.push(charCode2);
+	}
 	}
 document.getElementById("text").innerHTML = txtcrnt;
 }
