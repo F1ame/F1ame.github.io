@@ -25,7 +25,7 @@ cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
 	cmdev = "cmds." + cm[0];
 	console.log(cm);
-	console.log(cmdev);
+	console.log(eval(cmdev));
 }
 pgnd = "</body></html>";
 txtcrnt = ":";
