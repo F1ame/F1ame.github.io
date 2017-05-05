@@ -38,7 +38,7 @@ cm = cm.substring(1,cm.length);
 	cmdev = eval(cmdev)
 	console.log(cm);
 	console.log(cmdev);
-	prevoutp = document.getElementById("
+	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = ">" cmdev + "<br>";
 }
 pgnd = "</body></html>";
