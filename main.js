@@ -73,7 +73,7 @@ document.onkeyup = function(evt) {
 	}
 	if(charCode != 16) {
 		if(charCode != 8) {
-		charCodelst = charCodelst.append(charCode);
+		charCodelst = charCode
 		};
 		if(chck.findIndex(indx) != -1) {
 		chck.splice(chck.findIndex(indx),1);
