@@ -13,14 +13,12 @@ otp = "<div"+ attr + ">";
 	return otp
 }
 div2 = "</div>";
-nter = false;
 cmds = {
 run: "got"
 };
-if(nter == true){
+function nter() {
 cmd(txtcrnt);
 	txtcrnt = ":";
-	nter= false;
 }
 function cmd(cm) {
 cm = cm.substring(1,cm.length);
@@ -138,7 +136,7 @@ function letter(cc) {
 		break;
 		case 13:
 			sk = "";
-			nter = true;
+			nter();
 		break;
 		case 186:
 			sk = ":";
@@ -252,7 +250,7 @@ function letter(cc) {
 		break;
 		case 13:
 			sk = "";
-			nter = true;
+			nter();
 		break;
 		case 186:
 			sk = ";";
