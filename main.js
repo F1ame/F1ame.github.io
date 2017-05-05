@@ -8,11 +8,16 @@ pgtp = "<!doctype html>\
 <div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\">:</span><span class=\"flsh\">|</span></span></div>\
 <title>";
 pgtp2 = "</title></head><body>";
+function indx(item) {
+return item == charCode	
+}
 function div(attr) {
 otp = "<div"+ attr + ">";
 	return otp
 }
 div2 = "</div>";
+chck = [];
+alwtp = true;
 cmds = {
 run: "got"
 };
@@ -43,6 +48,18 @@ document.onkeydown = function(evt2) {
 	if(charCode2 == 16) {
 		capi = true
 }
+	if(alwtp == true) {
+	if(charCode2 == 8) {
+		if(txtcrnt.length > 1) {
+		txtcrnt = txtcrnt.substring(0,txtcrnt.length-1);
+		}
+	}else if (charCode2 != 16) {
+	txtcrnt = txtcrnt + letter(charCode2);
+		alwtp = false;
+	}
+	}
+		chck.push(charCode2);
+document.getElementById("text").innerHTML = txtcrnt;
 }
 document.onkeyup = function(evt) {
     evt = evt || window.event;
@@ -53,16 +70,18 @@ document.onkeyup = function(evt) {
 	if(charCode == 16) {
 		capi = false;
 	}
-	if(charCode == 8) {
-		if(txtcrnt.length > 1) {
-		txtcrnt = txtcrnt.substring(0,txtcrnt.length-1);
-		}
-	}else if (charCode != 16) {
-	txtcrnt = txtcrnt + letter(charCode);
+	if(charCode != 16) {
+		if(chck.findIndex(indx) != -1) {
+		chck.splice(chck.findIndex(indx),1);
+				   }
+				   if(chck.length == 0) {
+			alwtp = true;
+				   }else{alwtp = 0}
 	}
-document.getElementById("text").innerHTML = txtcrnt;
+	
 };
 function letter(cc) {
+	
  sk = "";
 	console.log(capi)
 	if(capi) {
