@@ -13,6 +13,12 @@ otp = "<div"+ attr + ">";
 	return otp
 }
 div2 = "</div>";
+nter = false;
+if(nter == true){
+cmd(txtcrnt);
+	txtcrnt = ":";
+	nter= false;
+}
 pgnd = "</body></html>";
 txtcrnt = ":";
 capi = false;
@@ -77,7 +83,6 @@ function letter(cc) {
 		case 89:
 		case 90:
 		sk = String.fromCharCode(cc);
-			console.log(sk)
 		break;
 		case 48:
 			sk = ")";
@@ -267,6 +272,4 @@ function letter(cc) {
 			sk = "";
 			break;
 		  }
-      console.log(sk)
-return sk;
-}}
+}return sk;}
