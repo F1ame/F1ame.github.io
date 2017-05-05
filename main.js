@@ -74,7 +74,8 @@ function letter(cc) {
 		case 88:
 		case 89:
 		case 90:
-		sk = String.fromCharCode(cc).toUpperCase();
+		sk = String.fromCharCode(cc);
+			sk = sk.toUpperCase();
 		break;
 		case 48:
 			sk = ")";
@@ -177,7 +178,8 @@ function letter(cc) {
 		case 88:
 		case 89:
 		case 90:
-		String.fromCharCode(cc).toLowerCase()
+		sk = String.fromCharCode(cc);
+			sk = sk.toLowerCase();
 		break;
 		case 48:
 	case 96:
