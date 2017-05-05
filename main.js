@@ -23,9 +23,13 @@ cmd(txtcrnt);
 function cmd(cm) {
 cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
-	cmdev = "cmds." + cm[0];
+	cmdev = "cmds.";
+	for(i = 0, i < cm.length, i++) {
+	cmdev = cmdev + cm[i];
+	}
+	cmdev = eval(cmdev)
 	console.log(cm);
-	console.log(eval(cmdev));
+	console.log(cmdev);
 }
 pgnd = "</body></html>";
 txtcrnt = ":";
