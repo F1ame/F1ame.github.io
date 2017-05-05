@@ -24,7 +24,7 @@ function cmd(cm) {
 cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
 	cmdev = "cmds.";
-	for(i = 0, i < cm.length, i++) {
+	for(i in cm) {
 	cmdev = cmdev + cm[i];
 	}
 	cmdev = eval(cmdev)
