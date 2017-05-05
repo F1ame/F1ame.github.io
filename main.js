@@ -14,10 +14,20 @@ otp = "<div"+ attr + ">";
 }
 div2 = "</div>";
 nter = false;
+cmds = {
+run: "got"
+};
 if(nter == true){
 cmd(txtcrnt);
 	txtcrnt = ":";
 	nter= false;
+}
+fucntion cmd(cm) {
+cm = cm.substring(1,cm.length);
+	cm = cm.split(" ");
+	cmdev = "cmds." + cm[0];
+	console.log(cm);
+	console.log(cmdev);
 }
 pgnd = "</body></html>";
 txtcrnt = ":";
