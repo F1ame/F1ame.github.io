@@ -47,7 +47,8 @@ document.getElementById("text").innerHTML = txtcrnt;
 function letter(cc) {
  sk = "";
 	console.log(capi)
-	if(capi == true) {
+	if(capi) {
+		console.log(capi);
 	switch (cc){
 		case 65:
 		case 66:
