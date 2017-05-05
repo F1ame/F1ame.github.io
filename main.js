@@ -22,7 +22,7 @@ cmd(txtcrnt);
 	txtcrnt = ":";
 	nter= false;
 }
-fucntion cmd(cm) {
+function cmd(cm) {
 cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
 	cmdev = "cmds." + cm[0];
