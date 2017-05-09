@@ -18,7 +18,7 @@ chck = [];
 alwtp = true;
 vp = "";
 cmds = {
-run: run()
+run: "run"
 };
 capi = false;
 txtarea = document.getElementById("text");
@@ -51,6 +51,7 @@ cm = cm.substring(1,cm.length);
 	cmdev = cmdev + cm[i];
 	}
 	cmdev = eval(cmdev)
+	cmdev = eval(cmdev + "()")
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
