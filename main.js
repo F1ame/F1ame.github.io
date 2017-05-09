@@ -19,8 +19,17 @@ alwtp = true;
 cmds = {
 run: "run",
 chat: "chat",
-YT: "YT"
+YT: "YT",
+help: "help",
+clear: "clrlg"
 };
+function clrlg() {
+prevtp = ""
+return "cleared"	
+}
+function help() {
+	return "run --- run program<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+}
 function ndlc(sttr) {
 console.log(sttr);
 nm = sttr.indexOf("&")
@@ -36,17 +45,17 @@ if(defnr != "h"){
 	console.log(tkn)
 	ul = "http://www.youtube-nocookie.com/embed/" + tkn;
 	vp.document.open("text/html", "replace");
-	vp.document.write("<html><body><a href=\"" + ul + "\">view your video</a></body></html>")
+	vp.document.write("<html><head><style>*{background: black;}</style></head><body><a href=\"" + ul + "\">view your video</a></body></html>")
 	vp.document.close();
 	rtn = "created link"
 }else{
-	rtn = "please insert the link to your video after the YT command";
+	rtn = "please insert the v= to your video after the YT command";
 }
 return rtn
 }
 function chat() {
 	vp.document.open("text/html", "replace");
-    vp.document.write("<html><body>" + Shoutbx + "</body></html>");
+    vp.document.write("<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>");
     vp.document.close();
 	return "opened chat"
 }
@@ -75,6 +84,7 @@ cmd(txtcrnt);
 }
 function cmd(cm) {
 	defnr = "h"
+	prevtp = document.getElementById("outpt").innerHTML;
 cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
 	cmdev = "cmds.";
@@ -87,7 +97,6 @@ cm = cm.substring(1,cm.length);
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
-	prevtp = document.getElementById("outpt").innerHTML;
 	document.getElementById("outpt").innerHTML = prevtp + ">" + cmdev + "<br>";
 }txtcrnt = ":";
 
