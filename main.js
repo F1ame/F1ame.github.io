@@ -17,11 +17,15 @@ function div(attr) {
 otp = "<div"+ attr + ">";
 	return otp
 }
+funhction run() {
+	vp.write("hello world")
+	return "ran hw"
+}
 div2 = "</div>";
 chck = [];
 alwtp = true;
 cmds = {
-run: "got"
+run: run();
 };
 function nter() {
 cmd(txtcrnt);
@@ -39,7 +43,8 @@ cm = cm.substring(1,cm.length);
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
-	document.getElementById("outpt").innerHTML = ">" + cmdev + "<br>";
+	prevtp = document.getElementById("outpt").innerHTML;
+	document.getElementById("outpt").innerHTML = prevtp + ">" + cmdev + "<br>";
 }
 pgnd = "</body></html>";
 txtcrnt = ":";
