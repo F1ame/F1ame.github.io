@@ -30,7 +30,7 @@ otp = "<div"+ attr + ">";
 	return otp
 }
 function main(ck) {
-vp = window.open("Viewport","_top")	
+vp = window.open()	
 }
 function run() {
 	vp.document.write("hello world")
