@@ -18,8 +18,29 @@ chck = [];
 alwtp = true;
 cmds = {
 run: "run",
-chat: "chat"
+chat: "chat",
+YT: "YT"
 };
+function ndlc(sttr) {
+nm = sttr.indexOf("&")
+	if(nm == -1){
+		nm = sttr.length
+	}
+	return nm
+}
+function YT() {
+if(defnr != "h"){
+	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
+	ul = "www.youtube-nocookie.com/embed/" + tkn;
+	vp.document.open("text/html", "replace");
+	vp.document.write("<html><body><a href=\"" + ul + "\">view your video</a></body></html>")
+	vp.document.close();
+	rtn = "created link"
+}else{
+	rtn = "please insert the link to your video after the YT command";
+}
+return rtn
+}
 function chat() {
 	vp.document.open("text/html", "replace");
     vp.document.write("<html><body>" + Shoutbx + "</body></html>");
@@ -50,11 +71,13 @@ cmd(txtcrnt);
 	document.getElementById("text").innerHTML = txtcrnt;
 }
 function cmd(cm) {
+	defnr = "h"
 cm = cm.substring(1,cm.length);
 	cm = cm.split(" ");
 	cmdev = "cmds.";
-	for(i in cm) {
-	cmdev = cmdev + cm[i];
+	cmdev = cmdev + cm[0];
+	if(cm.length == 2){
+		defnr = cm[2]
 	}
 	cmdev = eval(cmdev)
 	cmdev = eval(cmdev + "()")
