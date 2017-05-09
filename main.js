@@ -22,6 +22,7 @@ chat: "chat",
 YT: "YT"
 };
 function ndlc(sttr) {
+console.log(sttr);
 nm = sttr.indexOf("&")
 	if(nm == -1){
 		nm = sttr.length
@@ -30,7 +31,9 @@ nm = sttr.indexOf("&")
 }
 function YT() {
 if(defnr != "h"){
+	console.log(defnr)
 	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
+	console.log(tkn)
 	ul = "www.youtube-nocookie.com/embed/" + tkn;
 	vp.document.open("text/html", "replace");
 	vp.document.write("<html><body><a href=\"" + ul + "\">view your video</a></body></html>")
