@@ -102,4 +102,3 @@ document.onkeyup = function(evt) {
 	}
 	
 };
-}}
