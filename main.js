@@ -8,9 +8,7 @@ pgtp = "<!doctype html>\
 <div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\">:</span><span class=\"flsh\">|</span></span></div>\
 <title>";
 pgtp2 = "</title></head><body>";
-
 pgnd = "</body></html>";
-
 webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
 charCodelst = 0;
 div2 = "</div>";
