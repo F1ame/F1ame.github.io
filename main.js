@@ -25,7 +25,7 @@ div2 = "</div>";
 chck = [];
 alwtp = true;
 cmds = {
-run: run();
+run: run()
 };
 function nter() {
 cmd(txtcrnt);
