@@ -147,6 +147,7 @@ document.onkeyup = function(evt) {
 	}
 if(rstxt){
 txtcrnt = ":";
-docum
+document.getElementById("text").innerHTML = txtcrnt;
+	rstxt = false;
 }
 };
