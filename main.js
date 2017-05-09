@@ -33,7 +33,9 @@ function main(ck) {
 vp = window.open()	
 }
 function run() {
-	vp.document.write("hello world")
+	    vp.document.open("text/html", "replace");
+    vp.document.write("<html><body><p>Hello World!</p></body></html>");
+    vp.document.close();
 	return "ran hw"
 }
 function nter() {
