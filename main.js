@@ -17,8 +17,15 @@ div2 = "</div>";
 chck = [];
 alwtp = true;
 cmds = {
-run: "run"
+run: "run",
+chat: "chat"
 };
+function chat() {
+	vp.document.open("text/html", "replace");
+    vp.document.write("<html><body>" + Shoutbx + "</body></html>");
+    vp.document.close();
+	return "opened chat"
+}
 capi = false;
 txtarea = document.getElementById("text");
 function indx(item) {
