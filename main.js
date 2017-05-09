@@ -16,6 +16,7 @@ charCodelst = 0;
 div2 = "</div>";
 chck = [];
 alwtp = true;
+vp = "";
 cmds = {
 run: run()
 };
