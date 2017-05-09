@@ -36,7 +36,7 @@ if(defnr != "h"){
 	console.log(tkn)
 	ul = "http://www.youtube-nocookie.com/embed/" + tkn;
 	vp.document.open("text/html", "replace");
-	vp.document.write("<html><body><a src=\"" + ul + "\">view your video</a></body></html>")
+	vp.document.write("<html><body><a href=\"" + ul + "\">view your video</a></body></html>")
 	vp.document.close();
 	rtn = "created link"
 }else{
