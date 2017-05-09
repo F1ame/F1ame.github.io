@@ -77,10 +77,10 @@ function run() {
     vp.document.close();
 	return "ran hw"
 }
+rstxt = false;
 function nter() {
 cmd(txtcrnt);
-	txtcrnt = ":";
-	document.getElementById("text").innerHTML = ":";
+	txtcrnt = ":";rstxt = true;
 }
 function cmd(cm) {
 	defnr = "h"
@@ -145,5 +145,8 @@ document.onkeyup = function(evt) {
 			alwtp = true;
 				   }else{alwtp = 0}
 	}
-	
+if(rstxt){
+txtcrnt = ":";
+docum
+}
 };
