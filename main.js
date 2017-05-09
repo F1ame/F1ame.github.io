@@ -69,7 +69,7 @@ otp = "<div"+ attr + ">";
 	return otp
 }
 function main(ck) {
-vp = window.open()	
+vp = window.open("https://f1ame.github.io","_blank")	
 }
 function run() {
 	    vp.document.open("text/html", "replace");
