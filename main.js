@@ -17,7 +17,7 @@ function div(attr) {
 otp = "<div"+ attr + ">";
 	return otp
 }
-funhction run() {
+function run() {
 	vp.write("hello world")
 	return "ran hw"
 }
