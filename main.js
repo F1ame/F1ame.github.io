@@ -77,7 +77,7 @@ cm = cm.substring(1,cm.length);
 	cmdev = "cmds.";
 	cmdev = cmdev + cm[0];
 	if(cm.length == 2){
-		defnr = cm[2]
+		defnr = cm[1]
 	}
 	cmdev = eval(cmdev)
 	cmdev = eval(cmdev + "()")
