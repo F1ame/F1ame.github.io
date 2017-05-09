@@ -33,7 +33,7 @@ function main(ck) {
 vp = window.open("Viewport","_top")	
 }
 function run() {
-	vp.write("hello world")
+	vp.document.write("hello world")
 	return "ran hw"
 }
 function nter() {
