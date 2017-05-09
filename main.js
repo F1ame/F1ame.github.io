@@ -80,7 +80,7 @@ function run() {
 function nter() {
 cmd(txtcrnt);
 	txtcrnt = ":";
-	document.getElementById("text").innerHTML = txtcrnt;
+	document.getElementById("text").innerHTML = ":";
 }
 function cmd(cm) {
 	defnr = "h"
