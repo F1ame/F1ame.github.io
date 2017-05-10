@@ -1,21 +1,12 @@
 rstxt = false;
+winext = false;
 function main(ck) {
- vp = window.open("https://f1ame.github.io","_blank")	
- }
+ vp = window.open("https://f1ame.github.io","_blank")
+winext = true; 
+}
 Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
-pgtp = "<!doctype html>\
-<html>\
-<head>\
-  <link rel=\"stylesheet\"href=\"main.css\">\
-	<script src=\"main.js\"></script>\
-	<audio loop autoplay><source src=\"Typing (Sound Effect).mp3\" type=\"audio/mpeg\"></audio>\
-<div class=\"main backdrp\"><br><span style=\"font-size: 200%; background: black; color: lightgreen;\"> 	>  <span id=\"text\" style=\"font-size: 200%; background: black; color: lightgreen;\">:</span><span class=\"flsh\">|</span></span></div>\
-<title>";
-pgtp2 = "</title></head><body>";
-pgnd = "</body></html>";
 webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
 charCodelst = 0;
-div2 = "</div>";
 chck = [];
 alwtp = true;
 var cmdswnd = {
@@ -24,18 +15,17 @@ var cmdswnd = {
 	
 }
 function doc(tx) {
-try{
+	if(winext){
 		vp.document.open("text/html", "replace");
 		vp.document.write(tx);
 		vp.document.close();
-	return "Successfully"
+		rtn = "Successfully"
+	}else{
+		rtn="<br>> ERROR<br>> Please Click the Enter Site Button"
+	}
+	return rtn
 }
-catch(err){
-if(err.message.indexOf("vp") != -1) {
-	return "<br>> ERROR<br>> Please Click the Enter Site Button"
-} else {
-	console.log(err.message)
-}}
+
 cmds = {
 	run: function run() {
 	return "ran hw " + doc(cmdswnd.run)
