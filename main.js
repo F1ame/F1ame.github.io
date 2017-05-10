@@ -29,7 +29,6 @@ catch(e) {
 		rtn = "Successfully"
 	}else{
 		rtn="<br>> ERROR<br>> Please Click the Enter Site Button"
-		console.log(winext)
 	}
 	return rtn
 }
