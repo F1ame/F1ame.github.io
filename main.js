@@ -99,8 +99,7 @@ cm = cm.substring(1,cm.length);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
-}}
-
+}
 capi = false;
 txtcrnt = ":";
 function indx(item) {
