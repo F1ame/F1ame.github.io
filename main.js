@@ -38,7 +38,7 @@ cmds = {
 	return "ran hw " + doc(cmdswnd.run)
 },
 	chat: function() {
-	return "opened chat" + doc(cmdswnd.chat)
+	return "opened chat " + doc(cmdswnd.chat)
 },
 	YT: function() {
 		var defnryt = prompt("Please enter the youtube videos unshortened url", "");
@@ -59,11 +59,11 @@ help: function() {
 },
 clear: function() {
 prevtp = ""
-return "cleared"	
+return "cleared "	
 },
 	mute: function() {
 document.getElementById("aud").removeAttribute("loop");
-	return "muted"
+	return "muted "
 },
 };
 
