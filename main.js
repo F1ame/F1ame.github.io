@@ -2,7 +2,6 @@ rstxt = false;
 	var barIsDeclared = true;
 function main(ck) {
 	vp = window.open("https://f1ame.github.io","_blank")
-	console.log(vp)
 }
 Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
@@ -34,6 +33,23 @@ catch(e) {
 }
 
 cmds = {
+	eval: function() {
+	var msg = ""
+		if(defnr == "/prompt"){
+		try{ eval(prompt("Please enter code",""));}
+			  catch(err) {
+		msg = "an error has occured" + err.message	
+		}
+	}else{
+		cmt = cm
+		cmt[0] = ""
+	try{eval(cmt.join(" "));}
+		catch(err){
+		msg = "an error has occured" + err.message
+		}
+	}
+		return msg
+	},
 	run: function() {
 	return "ran hw " + doc(cmdswnd.run)
 },
@@ -43,9 +59,7 @@ cmds = {
 	YT: function() {
 		var defnryt = prompt("Please enter the youtube videos unshortened url", "");
 if(defnryt != ""){
-	console.log(defnryt)
 	tkn = defnryt.slice(defnryt.indexOf("v=")+2,ndlc(defnryt));
-	console.log(tkn)
 	ul = "https://www.youtube-nocookie.com/embed/" + tkn;
 	ytpg = "<html><head><style>*{background: black;} iframe{ height: 100vh; width: 100vw;}</style></head><body><iframe src=\"" + ul + "\"></iframe></body></html>"
 	rtn = "Embeded video " + doc(ytpg)
@@ -55,7 +69,7 @@ if(defnryt != ""){
 return rtn
 },
 help: function() {
-	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+	return "eval (/prompt) --- evaluate text as code, input /prompt following eval to open a prompt to write code instead <br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
 },
 clear: function() {
 prevtp = ""
@@ -68,7 +82,6 @@ document.getElementById("aud").removeAttribute("loop");
 };
 
 function ndlc(sttr) {
-console.log(sttr);
 nm = sttr.indexOf("&")
 	if(nm == -1){
 		nm = sttr.length
@@ -99,12 +112,8 @@ cm = cm.substring(1,cm.length);
 	if(cm.length == 2){
 		defnr = cm[1]
 	}
-	console.log(cmdev);
 	cmdev = eval(cmdev)
-	console.log(cm);
-	console.log(cmdev);
 	cmdev = cmdev()
-	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = prevtp + "> " + cmdev + "<br>";
 }
@@ -117,7 +126,6 @@ document.onkeydown = function(evt2) {
     evt2 = evt2 || window.event;
     var charCode2 = evt2.keyCode || evt2.which;
     var charStr2 = String.fromCharCode(charCode2);
-    console.log(charCode2);
 	if(charCode2 == 16) {
 		capi = true
 }
@@ -140,8 +148,6 @@ document.onkeyup = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
-    console.log(charCode);
-	console.log(capi);
 	if(charCode == 16) {
 		capi = false;
 	}
@@ -152,8 +158,6 @@ document.onkeyup = function(evt) {
 		if(chck.findIndex(indx) != -1) {
 		chck.splice(chck.findIndex(indx),1);
 				   }
-		console.log(chck);
-		console.log(chck.length);
 				   if(chck.length == 0) {
 			alwtp = true;
 				   }else{alwtp = 0}
