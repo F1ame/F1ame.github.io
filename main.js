@@ -16,7 +16,7 @@ var cmdswnd = {
 }
 function doc(tx) {
  
-try{ if(vp){}; }
+try{ if(vp != 7){barIsDeclared = true;}; }
 catch(e) {
     if(e.name == "ReferenceError") {
         barIsDeclared = false;
