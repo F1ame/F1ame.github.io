@@ -1,8 +1,8 @@
 rstxt = false;
-winext = false;
+winext = false
 function main(ck) {
  vp = window.open("https://f1ame.github.io","_blank")
-winext = true; 
+winext = true 
 }
 Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
@@ -15,7 +15,7 @@ var cmdswnd = {
 	
 }
 function doc(tx) {
-	if(winext){
+	if(winext == true){
 		vp.document.open("text/html", "replace");
 		vp.document.write(tx);
 		vp.document.close();
