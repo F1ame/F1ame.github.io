@@ -28,10 +28,10 @@ function doc(tx) {
 
 cmds = {
 	run: function run() {
-	return "ran hw " + doc(cmdswnd.run)
+	return "ran hw " + eval(doc(cmdswnd.run))
 },
 	chat: function chat() {
-	return "opened chat" + doc(cmdswnd.chat)
+	return "opened chat" + eval(doc(cmdswnd.chat))
 },
 	YT: function YT() {
 if(defnr != "h"){
@@ -94,7 +94,7 @@ cm = cm.substring(1,cm.length);
 	if(cm.length == 2){
 		defnr = cm[1]
 	}
-	cmdev = eval(cmdev)
+	cmdev = eval(eval(cmdev))
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
