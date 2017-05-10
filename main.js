@@ -116,7 +116,9 @@ cm = cm.substring(1,cm.length);
 
 capi = false;
 txtcrnt = ":";
-
+function indx(item) {
+return item == charCodelst
+}
 document.onkeydown = function(evt2) {
     evt2 = evt2 || window.event;
     var charCode2 = evt2.keyCode || evt2.which;
