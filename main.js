@@ -27,13 +27,13 @@ function doc(tx) {
 }
 
 cmds = {
-	run: function run() {
+	run: function() {
 	return "ran hw " + eval(doc(cmdswnd.run))
 },
-	chat: function chat() {
+	chat: function() {
 	return "opened chat" + eval(doc(cmdswnd.chat))
 },
-	YT: function YT() {
+	YT: function() {
 if(defnr != "h"){
 	console.log(defnr)
 	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
