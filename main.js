@@ -28,10 +28,10 @@ function doc(tx) {
 
 cmds = {
 	run: function() {
-	return "ran hw " + eval(doc(cmdswnd.run))
+	return "ran hw " + doc(cmdswnd.run)
 },
 	chat: function() {
-	return "opened chat" + eval(doc(cmdswnd.chat))
+	return "opened chat" + doc(cmdswnd.chat)
 },
 	YT: function() {
 if(defnr != "h"){
