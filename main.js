@@ -41,9 +41,10 @@ cmds = {
 	return "opened chat" + doc(cmdswnd.chat)
 },
 	YT: function() {
-if(defnr != "h"){
-	console.log(defnr)
-	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
+		var defnryt = prompt("Please enter the youtube videos unshortened url", "");
+if(defnryt != ""){
+	console.log(defnryt)
+	tkn = defnryt.slice(defnryt.indexOf("v=")+2,ndlc(defnryt));
 	console.log(tkn)
 	ul = "https://www.youtube-nocookie.com/embed/" + tkn;
 	ytpg = "<html><head><style>*{background: black;} iframe{ height: 100vh; width: 100vw;}</style></head><body><iframe src=\"" + ul + "\"></iframe></body></html>"
@@ -54,7 +55,7 @@ if(defnr != "h"){
 return rtn
 },
 help: function() {
-	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
 },
 clear: function() {
 prevtp = ""
