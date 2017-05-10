@@ -33,6 +33,9 @@ catch(e) {
 }
 
 cmds = {
+	info: function() {
+	return "Contact Me at keeperflame45@gmail.com"	
+	},
 	eval: function() {
 	var msg = ""
 		if(defnr == "/prompt"){
@@ -69,7 +72,7 @@ if(defnryt != ""){
 return rtn
 },
 help: function() {
-	return "eval (/prompt) --- evaluate text as code, input /prompt following eval to open a prompt to write code instead <br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+	return "info --- contact information <br>> eval (/prompt) --- evaluate text as code, input /prompt following eval to open a prompt to write code instead <br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
 },
 clear: function() {
 prevtp = ""
