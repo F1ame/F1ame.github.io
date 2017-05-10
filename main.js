@@ -16,13 +16,13 @@ var cmdswnd = {
 }
 function doc(tx) {
  
-try{ vp; }
+try{ if(vp){}; }
 catch(e) {
     if(e.name == "ReferenceError") {
         barIsDeclared = false;
     }
 }
-	if(barIsDeclared){
+	if(barIsDeclared == true){
 		vp.document.open("text/html", "replace");
 		vp.document.write(tx);
 		vp.document.close();
