@@ -45,7 +45,7 @@ if(defnr != "h"){
 	console.log(defnr)
 	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
 	console.log(tkn)
-	ul = "http://www.youtube-nocookie.com/embed/" + tkn;
+	ul = "https://www.youtube-nocookie.com/embed/" + tkn;
 	ytpg = "<html><head><style>*{background: black;} iframe{ height: 100vh; width: 100vw;}</style></head><body><iframe src=\"" + ul + "\"></iframe></body></html>"
 	rtn = "Embeded video " + doc(ytpg)
 }else{
