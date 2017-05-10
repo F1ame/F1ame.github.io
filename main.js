@@ -46,14 +46,14 @@ if(defnr != "h"){
 }
 return rtn
 },
-help: function help() {
+help: function() {
 	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
 },
-clear: function clrlg() {
+clear: function() {
 prevtp = ""
 return "cleared"	
 },
-	mute: function mute() {
+	mute: function() {
 document.getElementById("aud").removeAttribute("loop");
 	return "muted"
 },
