@@ -99,10 +99,6 @@ cm = cm.substring(1,cm.length);
 	console.log(cm);
 	console.log(cmdev);
 	cmdev = cmdev()
-	console.log(cm);
-	console.log(cmdev);
-	cmdev = eval(cmdev);
-	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
