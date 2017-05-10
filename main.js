@@ -113,9 +113,6 @@ cm = cm.substring(1,cm.length);
 	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
 }}
-catch(err) {
-	console.log(err.message)
-}
 
 
 txtcrnt = ":";
