@@ -15,16 +15,31 @@ charCodelst = 0;
 div2 = "</div>";
 chck = [];
 alwtp = true;
+var cmdswnd = {
+	run: "<html><body><p>Hello World!</p></body></html>",
+	chat: "<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>",
+	
+}
+function doc(tx) {
+try{
+		vp.document.open("text/html", "replace");
+		vp.document.write(tx);
+		vp.document.close();
+	return "Successfully"
+}
+catch(err){
+if(err.message.indexOf("vp") != -1) {
+	return "<br>> ERROR<br>> Please Click the Enter Site Button"
+} else {
+	console.log(err.message)
+}}
 cmds = {
 	run: function run() {
-	    vp.document.open("text/html", "replace");
-    vp.document.write("<html><body><p>Hello World!</p></body></html>");
-    vp.document.close();
-	return "ran hw"
+	return "ran hw " + doc(cmdswnd.run)
 },
 	chat: function chat() {
 	vp.document.open("text/html", "replace");
-    vp.document.write("<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>");
+    vp.document.write();
     vp.document.close();
 	return "opened chat"
 },
@@ -35,9 +50,10 @@ if(defnr != "h"){
 	console.log(tkn)
 	ul = "http://www.youtube-nocookie.com/embed/" + tkn;
 	vp.document.open("text/html", "replace");
-	vp.document.write("<html><head><style>*{background: black;}</style></head><body onload=\' window.open(\"" + ul + "\",\"_top\");\'>view your video</body></html>")
+	vp.document.write()
 	vp.document.close();
-	rtn = "created link"
+	ytpg = "<html><head><style>*{background: black;}</style></head><body onload=\' window.open(\"" + ul + "\",\"_top\");\'>view your video</body></html>"
+	rtn = ""
 }else{
 	rtn = "please insert the v= to your video after the YT command";
 }
@@ -55,7 +71,6 @@ document.getElementById("aud").removeAttribute("loop");
 	return "muted"
 },
 };
-try {
 
 function ndlc(sttr) {
 console.log(sttr);
@@ -96,7 +111,7 @@ cm = cm.substring(1,cm.length);
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
-	document.getElementById("outpt").innerHTML = prevtp + "> " + cmdev + "<br>";
+	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
 }}
 catch(err) {
 	console.log(err.message)
