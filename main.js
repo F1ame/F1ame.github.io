@@ -101,7 +101,7 @@ cm = cm.substring(1,cm.length);
 	cmdev = cmdev()
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
-	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
+	document.getElementById("outpt").innerHTML = prevtp + "> " + cmdev + "<br>";
 }
 capi = false;
 txtcrnt = ":";
