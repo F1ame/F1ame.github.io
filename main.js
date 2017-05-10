@@ -83,9 +83,6 @@ function div(attr) {
 otp = "<div"+ attr + ">";
 	return otp
 }
-function main(ck) {
-vp = window.open("https://f1ame.github.io","_blank")	
-}
 rstxt = false;
 function nter() {
 cmd(txtcrnt);
