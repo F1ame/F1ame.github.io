@@ -16,34 +16,19 @@ div2 = "</div>";
 chck = [];
 alwtp = true;
 cmds = {
-run: "run",
-chat: "chat",
-YT: "YT",
-help: "help",
-clear: "clrlg",
-	mute: "mute",
-};
-try {
-function mute() {
-document.getElementById("aud").removeAttribute("loop");
-	return "muted"
-}
-function clrlg() {
-prevtp = ""
-return "cleared"	
-}
-function help() {
-	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
-}
-function ndlc(sttr) {
-console.log(sttr);
-nm = sttr.indexOf("&")
-	if(nm == -1){
-		nm = sttr.length
-	}
-	return nm
-}
-function YT() {
+	run: function run() {
+	    vp.document.open("text/html", "replace");
+    vp.document.write("<html><body><p>Hello World!</p></body></html>");
+    vp.document.close();
+	return "ran hw"
+},
+	chat: function chat() {
+	vp.document.open("text/html", "replace");
+    vp.document.write("<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>");
+    vp.document.close();
+	return "opened chat"
+},
+	YT: function YT() {
 if(defnr != "h"){
 	console.log(defnr)
 	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
@@ -57,12 +42,28 @@ if(defnr != "h"){
 	rtn = "please insert the v= to your video after the YT command";
 }
 return rtn
-}
-function chat() {
-	vp.document.open("text/html", "replace");
-    vp.document.write("<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>");
-    vp.document.close();
-	return "opened chat"
+},
+help: function help() {
+	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+},
+clear: function clrlg() {
+prevtp = ""
+return "cleared"	
+},
+	mute: function mute() {
+document.getElementById("aud").removeAttribute("loop");
+	return "muted"
+},
+};
+try {
+
+function ndlc(sttr) {
+console.log(sttr);
+nm = sttr.indexOf("&")
+	if(nm == -1){
+		nm = sttr.length
+	}
+	return nm
 }
 capi = false;
 txtarea = document.getElementById("text");
@@ -75,12 +76,6 @@ otp = "<div"+ attr + ">";
 }
 function main(ck) {
 vp = window.open("https://f1ame.github.io","_blank")	
-}
-function run() {
-	    vp.document.open("text/html", "replace");
-    vp.document.write("<html><body><p>Hello World!</p></body></html>");
-    vp.document.close();
-	return "ran hw"
 }
 rstxt = false;
 function nter() {
@@ -98,7 +93,6 @@ cm = cm.substring(1,cm.length);
 		defnr = cm[1]
 	}
 	cmdev = eval(cmdev)
-	cmdev = eval(cmdev + "()")
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
