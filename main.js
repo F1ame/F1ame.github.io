@@ -1,9 +1,4 @@
-nter = false;
 rstxt = false;
- function nter() {
-  cmd(txtcrnt);
-  	txtcrnt = ":";rstxt = true;
-  }
 function main(ck) {
  vp = window.open("https://f1ame.github.io","_blank")	
  }
@@ -23,7 +18,6 @@ charCodelst = 0;
 div2 = "</div>";
 chck = [];
 alwtp = true;
-rstxt = false;
 var cmdswnd = {
 	run: "<html><body><p>Hello World!</p></body></html>",
 	chat: "<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>",
