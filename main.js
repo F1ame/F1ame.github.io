@@ -1,3 +1,4 @@
+
 Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 pgtp = "<!doctype html>\
 <html>\
@@ -19,14 +20,19 @@ run: "run",
 chat: "chat",
 YT: "YT",
 help: "help",
-clear: "clrlg"
+clear: "clrlg",
+	mute: "mute",
 };
+function mute() {
+document.getElementById("aud").setAttribute("muted");
+	return "muted"
+}
 function clrlg() {
 prevtp = ""
 return "cleared"	
 }
 function help() {
-	return "run --- run program<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+	return "run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT (v=_________) --- generate a link to the designated video<br>> help --- List Commands<br>> clear --- Clear log"
 }
 function ndlc(sttr) {
 console.log(sttr);
@@ -80,6 +86,7 @@ function nter() {
 cmd(txtcrnt);
 	txtcrnt = ":";rstxt = true;
 }
+try {
 function cmd(cm) {
 	defnr = "h"
 	prevtp = document.getElementById("outpt").innerHTML;
@@ -96,7 +103,13 @@ cm = cm.substring(1,cm.length);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
 	document.getElementById("outpt").innerHTML = prevtp + "> " + cmdev + "<br>";
-}txtcrnt = ":";
+}}
+catch(err) {
+	console.log(err.message)
+}
+
+
+txtcrnt = ":";
 
 document.onkeydown = function(evt2) {
     evt2 = evt2 || window.event;
