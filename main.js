@@ -97,7 +97,7 @@ cm = cm.substring(1,cm.length);
 	cmdev = eval(eval(cmdev))
 	console.log(cm);
 	console.log(cmdev);
-	cmdev = eval(cmdev)
+	cmdev = cmdev()
 	console.log(cm);
 	console.log(cmdev);
 	//prevoutp = document.getElementById("outp
