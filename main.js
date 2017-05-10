@@ -10,7 +10,7 @@ charCodelst = 0;
 chck = [];
 alwtp = true;
 var cmdswnd = {
-	run: "<html><body><textarea id=\"tst\"></textarea><button onclick=\"do()\">Run Code</button><script>function do() {eval(document.getElementById(\"tst\").value)}</script></body></html>",
+	run: "<html><body><textarea id=\"tst\"></textarea><button onclick=\"dvl()\">Run Code</button><script>function dvl() {eval(document.getElementById(\"tst\").value)}</script></body></html>",
 	chat: "<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>",
 	
 }
