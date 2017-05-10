@@ -15,6 +15,7 @@ charCodelst = 0;
 div2 = "</div>";
 chck = [];
 alwtp = true;
+rstxt = false;
 var cmdswnd = {
 	run: "<html><body><p>Hello World!</p></body></html>",
 	chat: "<html><head><style>*{background: black; color: white;}</style></head><body>" + Shoutbx + "</body></html>",
@@ -163,6 +164,9 @@ document.onkeyup = function(evt) {
 				   if(chck.length == 0) {
 			alwtp = true;
 				   }else{alwtp = 0}
+	}
+	if(charCode == 13){
+	rstxt = true	
 	}
 if(rstxt){
 txtcrnt = ":";
