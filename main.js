@@ -1,4 +1,12 @@
 nter = false;
+rstxt = false;
+ function nter() {
+  cmd(txtcrnt);
+  	txtcrnt = ":";rstxt = true;
+  }
+function main(ck) {
+ vp = window.open("https://f1ame.github.io","_blank")	
+ }
 Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 pgtp = "<!doctype html>\
 <html>\
@@ -39,10 +47,7 @@ cmds = {
 	return "ran hw " + doc(cmdswnd.run)
 },
 	chat: function chat() {
-	vp.document.open("text/html", "replace");
-    vp.document.write();
-    vp.document.close();
-	return "opened chat"
+	return "opened chat" + doc(cmdswnd.chat)
 },
 	YT: function YT() {
 if(defnr != "h"){
@@ -50,11 +55,8 @@ if(defnr != "h"){
 	tkn = defnr.slice(defnr.indexOf("v=")+2,ndlc(defnr));
 	console.log(tkn)
 	ul = "http://www.youtube-nocookie.com/embed/" + tkn;
-	vp.document.open("text/html", "replace");
-	vp.document.write()
-	vp.document.close();
-	ytpg = "<html><head><style>*{background: black;}</style></head><body onload=\' window.open(\"" + ul + "\",\"_top\");\'>view your video</body></html>"
-	rtn = ""
+	ytpg = "<html><head><style>*{background: black;} iframe{ height: 100vh; width: 100vw;}</style></head><body><iframe src=\"" + ul + "\"></iframe></body></html>"
+	rtn = "Embeded video " + doc(ytpg)
 }else{
 	rtn = "please insert the v= to your video after the YT command";
 }
@@ -164,9 +166,6 @@ document.onkeyup = function(evt) {
 				   if(chck.length == 0) {
 			alwtp = true;
 				   }else{alwtp = 0}
-	}
-	if(charCode == 13){
-	rstxt = true	
 	}
 if(rstxt){
 txtcrnt = ":";
