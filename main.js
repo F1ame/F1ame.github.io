@@ -23,6 +23,7 @@ help: "help",
 clear: "clrlg",
 	mute: "mute",
 };
+try {
 function mute() {
 document.getElementById("aud").removeAttribute("loop");
 	return "muted"
@@ -86,7 +87,6 @@ function nter() {
 cmd(txtcrnt);
 	txtcrnt = ":";rstxt = true;
 }
-try {
 function cmd(cm) {
 	defnr = "h"
 	prevtp = document.getElementById("outpt").innerHTML;
