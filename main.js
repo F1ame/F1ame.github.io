@@ -114,7 +114,7 @@ cm = cm.substring(1,cm.length);
 	document.getElementById("outpt").innerHTML = prevtp + "> " + eval(cmdev) + "<br>";
 }}
 
-
+capi = false;
 txtcrnt = ":";
 
 document.onkeydown = function(evt2) {
