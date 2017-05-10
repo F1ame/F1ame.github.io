@@ -1,10 +1,7 @@
 
 function letter(cc) {
-	
  sk = "";
-	console.log(capi)
 	if(capi) {
-		console.log(capi);
 	switch (cc){
 		case 65:
 		case 66:
