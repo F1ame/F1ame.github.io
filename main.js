@@ -24,7 +24,7 @@ clear: "clrlg",
 	mute: "mute",
 };
 function mute() {
-document.getElementById("aud").setAttribute("muted");
+document.getElementById("aud").setAttribute("muted", "muted");
 	return "muted"
 }
 function clrlg() {
