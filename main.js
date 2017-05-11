@@ -10,8 +10,8 @@ txtarea = document.getElementById("text");
 txtcrnt = ":";
 var cmds = {
     spam: function() {
-        for(i = 0, i <= LinkArray.length, i++) {
-            eval("window.open(\'" + LinkArry[i - 1] + "\',\'_blank\')")
+        for(i in LinkArray) {
+            eval("window.open(\'" + LinkArry[i] + "\',\'_blank\')")
         }
         return "kk"
     open: function() {
