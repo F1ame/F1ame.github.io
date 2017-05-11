@@ -47,7 +47,7 @@ var cmds = {
         return rtn
     },
     help: function() {
-        return "open --- opens output window<br>> info --- contact information <br>> eval --- evaluate text as code<br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+        return "open --- opens output window<br>&#10874; info --- contact information <br>&#10874; eval --- evaluate text as code<br>&#10874; run --- run program<br>&#10874; mute --- mutes that audio in the background<br>&#10874; chat --- open chat<br>&#10874; YT --- Embed the designated video<br>&#10874; help --- List Commands<br>&#10874; clear --- Clear log"
     },
     clear: function() {
         prevtp = ""
@@ -85,7 +85,7 @@ function doc(tx) {
         vp.document.close();
         rtn = "Successfully"
     } else {
-        rtn = "<br>> Error no output window<br>> Please enter the open command"
+        rtn = "<br>&#10874; Error no output window<br>&#10874; Please enter the open command"
     }
     return rtn
 }
@@ -119,7 +119,7 @@ function cmd(cm) {
     cmdev = eval(cmdev)
     cmdev = cmdev()
     //prevoutp = document.getElementById("outp
-    document.getElementById("outpt").innerHTML = prevtp + "> " + lstcmd + "<br>> " + cmdev + "<br>";
+    document.getElementById("outpt").innerHTML = prevtp + "&#8919; " + lstcmd + "<br>&#10874; " + cmdev + "<br>";
 }
 //get index number
 function indx(item) {
