@@ -14,4 +14,5 @@ body,.main,.main > * {margin: 0px; padding:0px;background:black; color: green;bo
 	  	  .verif {}
 * {font-size: 2vw;}
 .btn {border: none;float: right; position: Relative; background: black;}
-.sttl {font-size: 0.5em;}
+.sttl {font-size: 90%;}
+.ttl {font-size: 90%;}
