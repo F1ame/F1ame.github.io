@@ -18,6 +18,9 @@ var cmds = {
     },
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank')")
+        vp.document.open("text/html", "replace");
+        vp.document.write('<!doctype html><head><title>OutputWindow</title></head></html>');
+        vp.document.close();
         return "opened window"
     },
     info: function() {
