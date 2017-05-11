@@ -36,7 +36,7 @@ return "Contact Me at keeperflame45@gmail.com"
 },
 eval: function() {
 var msg = ""
-eval(prompt("Please enter code",""));}
+eval(prompt("Please enter code",""));
 return msg
 },
 run: function() {
