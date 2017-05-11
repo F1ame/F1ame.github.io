@@ -13,3 +13,5 @@ body,.main,.main > * {margin: 0px; padding=0px;background:black; color: green;bo
 	  .doc {visibility: hidden; z-index: 3;}
 	  	  .verif {z-index:40; height: 100vh; width: 100vw;}
 * {font-size: 2vw;}
+.btn {float: right;}
+.sttl {font-size: 0.5em;}
