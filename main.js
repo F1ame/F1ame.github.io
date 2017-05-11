@@ -19,7 +19,7 @@ var cmds = {
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank')")
         vp.document.open("text/html", "replace");
-        vp.document.write('<!doctype html><head><title>OutputWindow</title></head></html>');
+        vp.document.write('<!doctype html><head><title>OutputWindow</title><script>function old() {window.blur(); parent.focus();}</script></head><body onload=\'old()\'></body></html>');
         vp.document.close();
         return "opened window"
     },
