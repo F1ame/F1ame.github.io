@@ -19,7 +19,6 @@ var cmds = {
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank', \"width=400, height=400\")")
         vp.blur();
-        window.focus();
         return "opened window"
     },
     info: function() {
