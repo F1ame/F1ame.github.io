@@ -21,6 +21,8 @@ var cmds = {
         vp.blur();
         vp.document.write("<!doctype html><head><style>*{background: black}</style></head></htmL>")
         vp.document.close();
+        alwtp = true;
+        chck= [];
         return "opened window"
     },
     info: function() {
