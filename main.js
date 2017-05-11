@@ -1,5 +1,6 @@
 version = "V.0.1";
 rstxt = false;
+linkArray = ["http://slimabob.github.io/Megum.in/","http://downloadmoreram.com/","http://eelslap.com/","http://www.staggeringbeauty.com/","http://www.movenowthinklater.com/","http://ducksarethebest.com/","http://www.rrrgggbbb.com/","http://www.partridgegetslucky.com/","http://hooooooooo.com/","http://www.trypap.com/","http://burymewithmymoney.com/","http://endless.horse/","http://www.fallingfalling.com/","http://thatsthefinger.com/"]; // your links
 var Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 var webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
 charCodelst = 0;
@@ -10,8 +11,8 @@ txtarea = document.getElementById("text");
 txtcrnt = ":";
 var cmds = {
     spam: function() {
-        for(i in LinkArray) {
-            eval("window.open(\'" + LinkArry[i] + "\',\'_blank\')")
+        for(i in linkArray) {
+            eval("window.open(\'" + linkArry[i] + "\',\'_blank\')")
         }
         return "kk"
     },
