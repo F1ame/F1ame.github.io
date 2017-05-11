@@ -1,3 +1,5 @@
+version = "v.0.1";
+document.getElementById("vrs").innerHTML = version;
 rstxt = false;
 var barIsDeclared = true;
 function main(ck) {
