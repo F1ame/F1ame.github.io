@@ -12,7 +12,7 @@ txtcrnt = ":";
 var cmds = {
     spam: function() {
         for(i in linkArray) {
-            eval("window.open(\'" + linkArry[i] + "\',\'_blank\')")
+            eval("window.open(\'" + linkArray[i] + "\',\'_blank\')")
         }
         return "kk"
     },
