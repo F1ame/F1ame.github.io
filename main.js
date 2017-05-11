@@ -17,10 +17,9 @@ var cmds = {
         return "kk"
     },
     open: function() {
-        vp = eval("window.open('https://f1ame.github.io','_blank')")
-        vp.document.open("text/html", "replace");
-        vp.document.write('<!doctype html><head><title>OutputWindow</title><script>function old() {window.blur(); parent.focus();}</script></head><body onload=\'old()\'></body></html>');
-        vp.document.close();
+        vp = eval("window.open('https://f1ame.github.io','_blank', \"width=400, height=400\")")
+        vp.blur();
+        window.focus();
         return "opened window"
     },
     info: function() {
