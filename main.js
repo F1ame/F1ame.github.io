@@ -9,6 +9,11 @@ capi = false;
 txtarea = document.getElementById("text");
 txtcrnt = ":";
 var cmds = {
+    spam: function() {
+        for(i = 0, i <= LinkArray.length, i++) {
+            eval("window.open(\'" + LinkArry[i - 1] + "\',\'_blank\')")
+        }
+        return "kk"
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank')")
         return "opened window"
