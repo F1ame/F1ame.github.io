@@ -1,4 +1,4 @@
-var version = "V.0.1";
+version = "V.0.1";
 rstxt = false;
 var Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
 var webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
@@ -14,6 +14,7 @@ var cmds = {
             eval("window.open(\'" + LinkArry[i] + "\',\'_blank\')")
         }
         return "kk"
+    },
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank')")
         return "opened window"
