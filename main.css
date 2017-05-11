@@ -1,4 +1,4 @@
-body,.main,.main > * {margin: 0px; padding=0px;background:black; color: green;border: none;}
+body,.main,.main > * {margin: 0px; padding:0px;background:black; color: green;border: none;}
     @keyframes flash {
       0% {color:lightgreen;} 
       50% {color:lightgreen;}
@@ -11,7 +11,7 @@ body,.main,.main > * {margin: 0px; padding=0px;background:black; color: green;bo
  .cdc { width: 40%;position: absolute; bottom: 0px; right: 20px;
     }
 	  .doc {visibility: hidden; z-index: 3;}
-	  	  .verif {z-index:40; height: 100vh; width: 100vw;}
+	  	  .verif {}
 * {font-size: 2vw;}
-.btn {float: right; position: Relative; background: black;}
+.btn {border: none;float: right; position: Relative; background: black;}
 .sttl {font-size: 0.5em;}
