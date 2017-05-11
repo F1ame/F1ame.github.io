@@ -19,6 +19,8 @@ var cmds = {
     open: function() {
         vp = eval("window.open('https://f1ame.github.io','_blank', \"width=400, height=400\")")
         vp.blur();
+        vp.document.write("<!doctype html><head><style>*{background: black}</style></head></htmL>")
+        vp.document.close();
         return "opened window"
     },
     info: function() {
