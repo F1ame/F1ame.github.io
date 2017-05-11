@@ -1,14 +1,18 @@
-version = "V.0.1";
+var version = "V.0.1";
 rstxt = false;
-Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
-webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
+var Shoutbx = "<iframe id=\"sbx\" WIDTH=\"200\" HEIGHT=\"400\" title=\"Shoutbox\" src=\"https://shoutbox.widget.me/start.html?uid=591uatyg\" frameborder=\"0\" scrolling=\"auto\"></iframe>";
+var webAppUrl = "https://script.google.com/macros/s/AKfycbzIkiKjIHtWvw5WeNmNMTIE98i3OUvWYaKjAmrFm9YYr6SKsxUJ/exec"
 charCodelst = 0;
 chck = [];
 alwtp = true;
 capi = false;
 txtarea = document.getElementById("text");
 txtcrnt = ":";
-cmds = {
+var cmds = {
+    open: function() {
+        vp = eval("window.open('https://f1ame.github.io','_blank')")
+        return "opened window"
+    },
     info: function() {
         return "Contact Me at keeperflame45@gmail.com"
     },
@@ -36,7 +40,7 @@ cmds = {
         return rtn
     },
     help: function() {
-        return "info --- contact information <br>> eval --- evaluate text as code<br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
+        return "open --- opens output window<br>> info --- contact information <br>> eval --- evaluate text as code<br>> run --- run program<br>> mute --- mutes that audio in the background<br>> chat --- open chat<br>> YT --- Embed the designated video<br>> help --- List Commands<br>> clear --- Clear log"
     },
     clear: function() {
         prevtp = ""
@@ -74,7 +78,7 @@ function doc(tx) {
         vp.document.close();
         rtn = "Successfully"
     } else {
-        rtn = "<br>> ERROR<br>> Please Click the Enter Site Button"
+        rtn = "<br>> Error no output window<br>> Please enter the open command"
     }
     return rtn
 }
@@ -101,13 +105,14 @@ function cmd(cm) {
     cm = cm.split(" ");
     cmdev = "cmds.";
     cmdev = cmdev + cm[0];
+    lstcmd = cm[0];
     if (cm.length == 2) {
         defnr = cm[1]
     }
     cmdev = eval(cmdev)
     cmdev = cmdev()
     //prevoutp = document.getElementById("outp
-    document.getElementById("outpt").innerHTML = prevtp + "> " + cmdev + "<br>";
+    document.getElementById("outpt").innerHTML = prevtp + "> " + lstcmd + "<br>> " + cmdev + "<br>";
 }
 //get index number
 function indx(item) {
