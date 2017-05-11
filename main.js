@@ -141,6 +141,10 @@ document.onkeydown = function(evt2) {
         }
     }
     document.getElementById("text").innerHTML = txtcrnt;
+    if(charCode2 == 17){
+        alwtp = true;
+        chck= [];
+    }
 }
 document.onkeyup = function(evt) {
     evt = evt || window.event;
